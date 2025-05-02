@@ -14,7 +14,6 @@ Go to folder
 
 ```
 cd Sec-JWT
-
 ```
 
 Install
