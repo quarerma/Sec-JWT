@@ -6,11 +6,28 @@ This project is a basic NestJS API with authentication, including login and a pr
 
 ### 1. Clone the repository and install dependencies
 
-git clone https://github.com/quarerma/Sec-JWT.git cd your-nestjs-project npm install
+```
+git clone https://github.com/quarerma/Sec-JWT.git
+```
+
+Go to folder
+
+```
+cd Sec-JWT
+
+```
+
+Install
+
+```
+ npm install
+```
 
 ### 2. Start the server
 
+```
 npm run start:dev
+```
 
 The server will start on http://localhost:3000.
 
@@ -28,19 +45,23 @@ The server will start on http://localhost:3000.
 
 ### ✅ Valid Login (Will Work)
 
+```
 curl -X POST http://localhost:3000/auth/login \
  -H "Content-Type: application/json" \
  -d '{"name": "Reader", "password": "readerPass123"}'
+```
 
 This will return a response like:
 
-{ "access_token": "your.jwt.token.here" }
+{ "token": "jwt_token_response" }
 
 ### ❌ Invalid Login (Wrong Password)
 
+```
 curl -X POST http://localhost:3000/auth/login \
  -H "Content-Type: application/json" \
  -d '{"name": "Reader", "password": "wrongPassword"}'
+```
 
 This will return an error like:
 
@@ -56,11 +77,11 @@ Use the token from the valid login response.
 
 - URL: http://localhost:3000/user/permission
 - Method: GET
-- Header: Authorization: Bearer <your-token>
+- Header: Authorization: Bearer <jwt-token>
 
-### 🧪 cURL Example
-
+```
 curl -X GET http://localhost:3000/user/permission \
- -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+ -H "Authorization: Bearer JWT_ACCESS_TOKEN"
+```
 
-Replace YOUR_ACCESS_TOKEN with the actual token received during login.
+Replace JWT_ACCESS_TOKEN with the actual token received during login.
