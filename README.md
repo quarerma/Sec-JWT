@@ -1,6 +1,6 @@
-# NestJS Project - Authentication Example
+# RBAC control system with NestJs
 
-This project is a basic NestJS API implementing authentication and permission levels for a blog website.  
+This project is a basic NestJS API implementing RBAC for a blog website.  
 Users can have different roles such as **Reader**, **Writer**, or **Super Admin**.  
 The system uses **JWT (JSON Web Token)** as the authentication mechanism to securely encode user identity and role information.  
 Its primary purpose is to demonstrate how permission levels work using role-based access control with JWT.
